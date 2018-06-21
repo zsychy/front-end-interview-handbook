@@ -125,7 +125,8 @@ Here are two ways to fix it that involves adding more brackets: `(function foo()
 
 You might also use `void` operator: `void function foo(){ }();`. Unfortunately, there is one issue with such approach. The evaluation of given expression is always `undefined`, so if your IIFE function returns anything, you can't use it. An example:
 
-```js
+```
+// Don't add JS syntax to this code block to prevent Prettier from formatting it.
 const foo = void function bar() { return 'foo'; }();
 
 console.log(foo); // undefined
@@ -410,7 +411,7 @@ This is a browser-reported string that allows the network protocol peers to iden
 
 ### Explain Ajax in as much detail as possible.
 
-Ajax (asynchronous JavaScript and XML) is a set of web development techniques using many web technologies on the client side to create asynchronous web applications. With Ajax, web applications can send data to and retrieve from a server asynchronously (in the background) without interfering with the display and behavior of the existing page. By decoupling the data interchange layer from the presentation layer, Ajax allows for web pages, and by extension web applications, to change content dynamically without the need to reload the entire page. In practice, modern implementations commonly substitute JSON for XML due to the advantages of being native to JavaScript.
+Ajax (asynchronous JavaScript and XML) is a set of web development techniques using many web technologies on the client side to create asynchronous web applications. With Ajax, web applications can send data to and retrieve from a server asynchronously (in the background) without interfering with the display and behavior of the existing page. By decoupling the data interchange layer from the presentation layer, Ajax allows for web pages, and by extension web applications, to change content dynamically without the need to reload the entire page. In practice, modern implementations commonly substitute use JSON instead of XML, due to the advantages of JSON being native to JavaScript.
 
 The `XMLHttpRequest` API is frequently used for the asynchronous communication or these days, the `fetch` API.
 
@@ -487,7 +488,9 @@ However, do be aware of a potential XSS in the above approach as the contents ar
 
 ### Explain "hoisting".
 
-Hoisting is a term used to explain the behavior of variable declarations in your code. Variables declared or initialized with the `var` keyword will have their declaration "hoisted" up to the top of the current scope. However, only the declaration is hoisted, the assignment (if there is one), will stay where it is. Let's explain with a few examples.
+Hoisting is a term used to explain the behavior of variable declarations in your code. Variables declared or initialized with the `var` keyword will have their declaration "moved" up to the top of the current scope, which we refer to as hoisting. However, only the declaration is hoisted, the assignment (if there is one), will stay where it is.
+
+Note that the declaration is not actually moved - the JavaScript engine parses the declarations during compilation and becomes aware of declarations and their scopes. It is just easier to understand this behavior by visualizing the declarations as being hoisted to the top of their scope. Let's explain with a few examples.
 
 ```js
 // var declarations are hoisted.
@@ -649,7 +652,7 @@ Advantages:
 * Makes it impossible to accidentally create global variables.
 * Makes assignments which would otherwise silently fail to throw an exception.
 * Makes attempts to delete undeletable properties throw (where before the attempt would simply have no effect).
-* Requires that function parameter names be unique.a
+* Requires that function parameter names be unique.
 * `this` is undefined in the global context.
 * It catches some common coding bloopers, throwing exceptions.
 * It disables features that are confusing or poorly thought out.
@@ -907,12 +910,15 @@ function foo() {
 console.log(bar); // ReferenceError: bar is not defined
 console.log(baz); // ReferenceError: baz is not defined
 console.log(qux); // ReferenceError: qux is not defined
+```
 
+```js
 if (true) {
   var bar = 'bar';
   let baz = 'baz';
   const qux = 'qux';
 }
+
 // var declared variables are accessible anywhere in the function scope.
 console.log(bar); // bar
 // let and const defined variables are not accessible outside of the block they were defined in.
@@ -969,7 +975,54 @@ baz = 'qux';
 
 ### What are the differences between ES6 class and ES5 function constructors?
 
-TODO
+Let's first look at example of each:
+
+```js
+// ES5 Function Constructor
+function Person(name) {
+  this.name = name;
+}
+
+// ES6 Class
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+}
+```
+
+For simple constructors, they look pretty similar.
+
+The main difference in the constructor comes when using inheritance. If we want to create a `Student` class that subclasses `Person` and add a `studentId` field, this is what we have to do in addition to the above.
+
+```js
+// ES5 Function Constructor
+function Student(name, studentId) {
+  // Call constructor of superclass to initialize superclass-derived members.
+  Person.call(this, name);
+
+  // Initialize subclass's own members.
+  this.studentId = studentId;
+}
+
+Student.prototype = Object.create(Person.prototype);
+Student.prototype.constructor = Student;
+
+// ES6 Class
+class Student extends Person {
+  constructor(name, studentId) {
+    super(name);
+    this.studentId = studentId;
+  }
+}
+```
+
+It's much more verbose to use inheritance in ES5 and the ES6 version is easier to understand and remember.
+
+###### References
+
+* https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Inheritance
+* https://eli.thegreenplace.net/2013/10/22/classical-inheritance-in-javascript-es5
 
 [[↑] Back to top](#js-questions)
 

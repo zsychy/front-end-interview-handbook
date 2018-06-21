@@ -6,21 +6,21 @@
 * [请简述`JavaScript`中的`this`。](#请简述javascript中的this)
 * [请解释原型继承（prototypal inheritance）的工作原理。](#请解释原型继承prototypal-inheritance的工作原理)
 * [说说你对 AMD 和 CommonJS 的了解。](#说说你对-amd-和-commonjs-的了解)
-* [请解释下面代码为什么不能用作 IIFE：`function foo(){ }();` 需要作出哪些修改才能使其成为 IIFE？](#请解释下面代码为什么不能用作-iifefunction-foo--需要作出哪些修改才能使其成为-iife)
-* [`null`、`undefined`和未声明变量之间有什么区别？如何检查这些状态值？](#nullundefined和未声明变量之间有什么区别如何检查这些状态值)
-* [什么是闭包（closure），以及为什么使用闭包？](#什么是闭包closure以及为什么使用闭包)
-* [请说明`.forEach`循环和`.map()`循环的主要区别，以及分别何时使用？](#请说明foreach循环和map循环的主要区别以及分别何时使用)
+* [请解释下面代码为什么不能用作 IIFE：`function foo(){ }();`，需要作出哪些修改才能使其成为 IIFE？](#请解释下面代码为什么不能用作-iifefunction-foo-需要作出哪些修改才能使其成为-iife)
+* [`null`、`undefined`和未声明变量之间有什么区别？如何检查判断这些状态值？](#nullundefined和未声明变量之间有什么区别如何检查判断这些状态值)
+* [什么是闭包（closure），为什么使用闭包？](#什么是闭包closure为什么使用闭包)
+* [请说明`.forEach`循环和`.map()`循环的主要区别，它们分别在什么情况下使用？](#请说明foreach循环和map循环的主要区别它们分别在什么情况下使用)
 * [匿名函数的典型应用场景是什么？](#匿名函数的典型应用场景是什么)
 * [你如何组织自己的代码？（使用模块模式（module pattern）还是经典继承（classical inheritance）？）](#你如何组织自己的代码使用模块模式module-pattern还是经典继承classical-inheritance)
 * [宿主对象（host objects）和原生对象（native objects）的区别是什么？](#宿主对象host-objects和原生对象native-objects的区别是什么)
-* [下列语句有何区别：`function Person(){}`、`var person = Person()`和`var person = new Person()`？](#下列语句有何区别function-personvar-person--person和var-person--new-person)
+* [下列语句有什么区别：`function Person(){}`、`var person = Person()`和`var person = new Person()`？](#下列语句有什么区别function-personvar-person--person和var-person--new-person)
 * [`.call`和`.apply`有什么区别？](#call和apply有什么区别)
 * [请说明`Function.prototype.bind`的用法。](#请说明functionprototypebind的用法)
-* [什么时候会用到document.write()`？](#什么时候会用到documentwrite)
+* [什么时候会用到`document.write()`？](#什么时候会用到documentwrite)
 * [功能检测（feature detection）、功能推断（feature inference）和使用 UA 字符串之间有什么区别？](#功能检测feature-detection功能推断feature-inference和使用-ua-字符串之间有什么区别)
 * [请尽可能详细地解释 Ajax。](#请尽可能详细地解释-ajax)
-* [使用Ajax的优缺点分别是什么？](#使用ajax的优缺点分别是什么)
-* [请说明 JSONP 的工作原理，以及它为什么不是真正的 Ajax？](#请说明-jsonp-的工作原理以及它为什么不是真正的-ajax)
+* [使用 Ajax 的优缺点分别是什么？](#使用ajax的优缺点分别是什么)
+* [请说明 JSONP 的工作原理，它为什么不是真正的 Ajax？](#请说明-jsonp-的工作原理它为什么不是真正的-ajax)
 * [你使用过 JavaScript 模板吗？用过什么相关的库？](#你使用过-javascript-模板吗用过什么相关的库)
 * [请解释变量提升（hosting）。](#请解释变量提升hosting)
 * [请描述事件冒泡。](#请描述事件冒泡)
@@ -28,14 +28,14 @@
 * [为什么扩展 JavaScript 内置对象是不好的做法？](#为什么扩展-javascript-内置对象是不好的做法)
 * [document 中的`load`事件和`DOMContentLoaded`事件之间的区别是什么？](#document-中的load事件和domcontentloaded事件之间的区别是什么)
 * [`==`和`===`的区别是什么？](#和的区别是什么)
-* [请解释关于JavaScript的同源策略。](#请解释关于javascript的同源策略)
+* [请解释关于 JavaScript 的同源策略。](#请解释关于-javascript-的同源策略)
 * [请使下面的语句生效：](#请使下面的语句生效)
 * [请说明三元表达式中“三元”这个词代表什么？](#请说明三元表达式中三元这个词代表什么)
 * [什么是`"use strict";`？使用它有什么优缺点？](#什么是use-strict使用它有什么优缺点)
-* [创建一个循环，从1迭代到100，`3`的倍数时输出 "fizz"，`5`的倍数时输出 "buzz"，同时为`3`和`5`的倍数时输出 "fizzbuzz"。](#创建一个循环从1迭代到1003的倍数时输出-fizz5的倍数时输出-buzz同时为3和5的倍数时输出-fizzbuzz)
+* [创建一个循环，从 1 迭代到 100，`3`的倍数时输出 "fizz"，`5`的倍数时输出 "buzz"，同时为`3`和`5`的倍数时输出 "fizzbuzz"。](#创建一个循环从1迭代到1003的倍数时输出-fizz5的倍数时输出-buzz同时为3和5的倍数时输出-fizzbuzz)
 * [为什么不要使用全局作用域？](#为什么不要使用全局作用域)
 * [为什么要使用`load`事件？这个事件有什么缺点吗？你知道一些代替方案吗，为什么使用它们？](#为什么要使用load事件这个事件有什么缺点吗你知道一些代替方案吗为什么使用它们)
-* [请解释单页应用是什么以及如何使其对SEO友好。](#请解释单页应用是什么以及如何使其对seo友好)
+* [请解释单页应用是什么，如何使其对 SEO 友好。](#请解释单页应用是什么如何使其对seo友好)
 * [你对 Promises 及其 polyfill 的掌握程度如何？](#你对-promises-及其-polyfill-的掌握程度如何)
 * [`Promise`代替回调函数有什么优缺点？](#promise代替回调函数有什么优缺点)
 * [用转译成 JavaScript 的语言写 JavaScript 有什么优缺点？](#用转译成-javascript-的语言写-javascript-有什么优缺点)
@@ -55,7 +55,7 @@
 * [你能举出一个柯里化函数（curry function）的例子吗？它有哪些好处？](#你能举出一个柯里化函数curry-function的例子吗它有哪些好处)
 * [使用扩展运算符（spread）的好处是什么，它与使用剩余参数语句（rest）有什么区别？](#使用扩展运算符spread的好处是什么它与使用剩余参数语句rest有什么区别)
 * [如何在文件之间共用代码？](#如何在文件之间共用代码)
-* [为什么你可能想创建静态类成员？](#为什么你可能想创建静态类成员)
+* [什么情况下会用到静态类成员？](#什么情况下会用到静态类成员)
 
 ### 请解释事件委托（event delegation）。
 
@@ -77,9 +77,9 @@ JS 中的`this`是一个相对复杂的概念，不是简单几句能解释清�
 
 1. 在调用函数时使用`new`关键字，函数内的`this`是一个全新的对象。
 1. 如果`apply`、`call`或`bind`方法用于调用、创建一个函数，函数内的 this 就是作为参数传入这些方法的对象。
-1. 当函数作为对象里的方法被调用时，函数内的`this`是调用该函数的对象。比如当`obj.method()`被调用时，函数内的this将绑定到`obj`对象。
+1. 当函数作为对象里的方法被调用时，函数内的`this`是调用该函数的对象。比如当`obj.method()`被调用时，函数内的 this 将绑定到`obj`对象。
 1. 如果调用函数不符合上述规则，那么`this`的值指向全局对象（global object）。浏览器环境下`this`的值指向`window`对象，但是在严格模式下(`'use strict'`)，`this`的值为`undefined`。
-1. 如果符合上述多个规则，则较高的规则（1号最高，4号最低）将决定`this`的值。
+1. 如果符合上述多个规则，则较高的规则（1 号最高，4 号最低）将决定`this`的值。
 1. 如果该函数是 ES2015 中的箭头函数，将忽略上面的所有规则，`this`被设置为它被创建时的上下文。
 
 想获得更深入的解释，请查看[他在 Medium 上的文章](https://codeburst.io/the-simple-rules-to-this-in-javascript-35d97f31bde3)。
@@ -123,9 +123,19 @@ IIFE（Immediately Invoked Function Expressions）代表立即执行函数。 Ja
 
 修改方法是：再添加一对括号，形式上有两种：`(function foo(){ })()`和`(function foo(){ }())`。以上函数不会暴露到全局作用域，如果不需要在函数内部引用自身，可以省略函数的名称。
 
+你可能会用到 `void` 操作符：`void function foo(){ }();`。但是，这种做法是有问题的。表达式的值是`undefined`，所以如果你的 IIFE 有返回值，不要用这种做法。例如：
+
+```
+// Don't add JS syntax to this code block to prevent Prettier from formatting it.
+const foo = void function bar() { return 'foo'; }();
+
+console.log(foo); // undefined
+```
+
 ###### 参考
 
 * http://lucybain.com/blog/2014/immediately-invoked-function-expression/
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void
 
 [[↑] 回到顶部](#js-问题)
 
@@ -175,7 +185,7 @@ console.log(foo == undefined); // true. 错误，不要使用非严格相等！
 
 [[↑] 回到顶部](#js-问题)
 
-### 什么是闭包（closure），以及为什么使用闭包？
+### 什么是闭包（closure），为什么使用闭包？
 
 闭包是函数和声明该函数的词法环境的组合。词法作用域中使用的域，是变量在代码中声明的位置所决定的。闭包是即使被外部函数返回，依然可以访问到外部（封闭）函数作用域的函数。
 
@@ -191,7 +201,7 @@ console.log(foo == undefined); // true. 错误，不要使用非严格相等！
 
 [[↑] 回到顶部](#js-问题)
 
-### 请说明`.forEach`循环和`.map()`循环的主要区别，以及分别何时使用？
+### 请说明`.forEach`循环和`.map()`循环的主要区别，它们分别在什么情况下使用？
 
 为了理解两者的区别，我们看看它们分别是做什么的。
 
@@ -234,7 +244,7 @@ const doubled = a.map(num => {
 
 ### 匿名函数的典型应用场景是什么？
 
-匿名函数可以在IIFE中使用，来封装局部作用域内的代码，以便其声明的变量不会暴露到全局作用域。
+匿名函数可以在 IIFE 中使用，来封装局部作用域内的代码，以便其声明的变量不会暴露到全局作用域。
 
 ```js
 (function() {
@@ -289,7 +299,7 @@ console.log(double); // [2, 4, 6]
 
 [[↑] 回到顶部](#js-问题)
 
-### 下列语句有何区别：`function Person(){}`、`var person = Person()`和`var person = new Person()`？
+### 下列语句有什么区别：`function Person(){}`、`var person = Person()`和`var person = new Person()`？
 
 这个问题问得很含糊。我猜这是在考察 JavaScript 中的构造函数（constructor）。从技术上讲，`function Person(){}`只是一个普通的函数声明。使用 PascalCase 方式命名函数作为构造函数，是一个惯例。
 
@@ -319,7 +329,7 @@ console.log(person.name); // "john"
 
 ### `.call`和`.apply`有什么区别？
 
-`.call`和`.apply`都用于调用函数，第一个参数将用作函数内this的值。然而，`.call`接受逗号分隔的参数作为后面的参数，而`.apply`接受一个参数数组作为后面的参数。一个简单的记忆方法是，从`call`中的 C 联想到逗号分隔（comma-separated），从`apply`中的 A 联想到数组（array）。
+`.call`和`.apply`都用于调用函数，第一个参数将用作函数内 this 的值。然而，`.call`接受逗号分隔的参数作为后面的参数，而`.apply`接受一个参数数组作为后面的参数。一个简单的记忆方法是，从`call`中的 C 联想到逗号分隔（comma-separated），从`apply`中的 A 联想到数组（array）。
 
 ```js
 function add(a, b) {
@@ -336,9 +346,9 @@ console.log(add.apply(null, [1, 2])); // 3
 
 摘自[MDN](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_objects/Function/bind)：
 
-> `bind()`方法创建一个新的函数, 当被调用时，将其this关键字设置为提供的值，在调用新函数时，在任何提供之前提供一个给定的参数序列。
+> `bind()`方法创建一个新的函数, 当被调用时，将其 this 关键字设置为提供的值，在调用新函数时，在任何提供之前提供一个给定的参数序列。
 
-根据我的经验，将`this`的值绑定到想要传递给其他函数的类的方法中是非常有用的。在React组件中经常这样做。
+根据我的经验，将`this`的值绑定到想要传递给其他函数的类的方法中是非常有用的。在 React 组件中经常这样做。
 
 ###### 参考
 
@@ -348,10 +358,9 @@ console.log(add.apply(null, [1, 2])); // 3
 
 ### 什么时候会用到`document.write()`？
 
-`document.write()` writes a string of text to a document stream opened by `document.open()`. When `document.write()` is executed after the page has loaded, it will call `document.open` which clears the whole document (`<head>` and `<body>` removed!) and replaces the contents with the given parameter value in string. Hence it is usually considered dangerous and prone to misuse.
 `document.write()`用来将一串文本写入由`document.open()`打开的文档流中。当页面加载后执行`document.write()`时，它将调用`document.open`，会清除整个文档（`<head>`和`<body>`会被移除！），并将文档内容替换成给定的字符串参数。因此它通常被认为是危险的并且容易被误用。
 
-网上有一些答案，解释了`document.write()`被用于分析代码中，或者[当你想包含只有在启用了 JavaScript 的情况下才能工作的样式](https://www.quirksmode.org/blog/archives/2005/06/three_javascrip_1.html)。它甚至在HTML5样板代码中用于[并行加载脚本并保持执行顺序](https://github.com/paulirish/html5-boilerplate/wiki/Script-Loading-Techniques#documentwrite-script-tag)！但是，我怀疑这些使用原因是过时的，现在可以在不使用`document.write()`的情况下实现。如果我的观点有错，请纠正我。
+网上有一些答案，解释了`document.write()`被用于分析代码中，或者[当你想包含只有在启用了 JavaScript 的情况下才能工作的样式](https://www.quirksmode.org/blog/archives/2005/06/three_javascrip_1.html)。它甚至在 HTML5 样板代码中用于[并行加载脚本并保持执行顺序](https://github.com/paulirish/html5-boilerplate/wiki/Script-Loading-Techniques#documentwrite-script-tag)！但是，我怀疑这些使用原因是过时的，现在可以在不使用`document.write()`的情况下实现。如果我的观点有错，请纠正我。
 
 ###### 参考
 
@@ -402,9 +411,9 @@ if (document.getElementsByTagName) {
 
 ### 请尽可能详细地解释 Ajax。
 
-Ajax（asynchronous JavaScript and XML）是使用客户端上的许多Web技术，创建异步Web应用的一种Web开发技术。借助Ajax，Web应用可以异步（在后台）向服务器发送数据和从服务器检索数据，而不会干扰现有页面的显示和行为。通过将数据交换层与表示层分离，Ajax允许网页和扩展Web应用程序动态更改内容，而无需重新加载整个页面。实际上，现在通常将JSON替换为XML，因为 JavaScript 对 JSON 有原生支持优势。
+Ajax（asynchronous JavaScript and XML）是使用客户端上的许多 Web 技术，创建异步 Web 应用的一种 Web 开发技术。借助 Ajax，Web 应用可以异步（在后台）向服务器发送数据和从服务器检索数据，而不会干扰现有页面的显示和行为。通过将数据交换层与表示层分离，Ajax 允许网页和扩展 Web 应用程序动态更改内容，而无需重新加载整个页面。实际上，现在通常将 XML 替换为 JSON，因为 JavaScript 对 JSON 有原生支持优势。
 
-`XMLHttpRequest` API经常用于异步通信。此外还有最近流行的`fetch` API。
+`XMLHttpRequest` API 经常用于异步通信。此外还有最近流行的`fetch` API。
 
 ###### 参考
 
@@ -413,7 +422,7 @@ Ajax（asynchronous JavaScript and XML）是使用客户端上的许多Web技术
 
 [[↑] 回到顶部](#js-问题)
 
-### 使用Ajax的优缺点分别是什么？
+### 使用 Ajax 的优缺点分别是什么？
 
 **优点**
 
@@ -431,9 +440,9 @@ Ajax（asynchronous JavaScript and XML）是使用客户端上的许多Web技术
 
 [[↑] 回到顶部](#js-问题)
 
-### 请说明 JSONP 的工作原理，以及它为什么不是真正的 Ajax？
+### 请说明 JSONP 的工作原理，它为什么不是真正的 Ajax？
 
-JSONP（带填充的JSON）是一种通常用于绕过Web浏览器中的跨域限制的方法，因为 Ajax 不允许跨域请求。
+JSONP（带填充的 JSON）是一种通常用于绕过 Web 浏览器中的跨域限制的方法，因为 Ajax 不允许跨域请求。
 
 JSONP 通过`<script>`标签发送跨域请求，通常使用`callback`查询参数，例如：`https://example.com?callback=printData`。 然后服务器将数据包装在一个名为`printData`的函数中并将其返回给客户端。
 
@@ -467,7 +476,7 @@ JSONP 可能具有一些安全隐患。由于 JSONP 是纯 JavaScript 实现，�
 
 ### 你使用过 JavaScript 模板吗？用过什么相关的库？
 
-使用过。Handlebars、Underscore、Lodash、AngularJS和JSX。我不喜欢 AngularJS 中的模板，因为它在指令中大量使用了字符串，并且书写错误会被忽略。JSX是我的新宠，因为它更接近 JavaScript，几乎没有什么学习成本。现在，可以使用 ES2015 模板字符串快速创建模板，而不需依赖第三方代码。
+使用过。Handlebars、Underscore、Lodash、AngularJS 和 JSX。我不喜欢 AngularJS 中的模板，因为它在指令中大量使用了字符串，并且书写错误会被忽略。JSX 是我的新宠，因为它更接近 JavaScript，几乎没有什么学习成本。现在，可以使用 ES2015 模板字符串快速创建模板，而不需依赖第三方代码。
 
 ```js
 const template = `<div>My name is: ${name}</div>`;
@@ -517,7 +526,7 @@ console.log(bar); // [Function: bar]
 
 ### 请描述事件冒泡。
 
-当一个事件在DOM元素上触发时，如果有事件监听器，它将尝试处理该事件，然后事件冒泡到其父级元素，并发生同样的事情。最后直到事件到达祖先元素。事件冒泡是实现事件委托的原理（event delegation）。
+当一个事件在 DOM 元素上触发时，如果有事件监听器，它将尝试处理该事件，然后事件冒泡到其父级元素，并发生同样的事情。最后直到事件到达祖先元素。事件冒泡是实现事件委托的原理（event delegation）。
 
 [[↑] 回到顶部](#js-问题)
 
@@ -560,7 +569,7 @@ console.log(input.value); // Hello World!
 
 当初始的 HTML 文档被完全加载和解析完成之后，`DOMContentLoaded`事件被触发，而无需等待样式表、图像和子框架的完成加载。
 
-`window`的`load`事件仅在DOM和所有相关资源全部完成加载后才会触发。
+`window`的`load`事件仅在 DOM 和所有相关资源全部完成加载后才会触发。
 
 ###### 参考
 
@@ -596,9 +605,9 @@ console.log(a == undefined); // true
 
 [[↑] 回到顶部](#js-问题)
 
-### 请解释关于JavaScript的同源策略。
+### 请解释关于 JavaScript 的同源策略。
 
-同源策略可防止 JavaScript 发起跨域请求。源被定义为URI、主机名和端口号的组合。此策略可防止页面上的恶意脚本通过该页面的文档对象模型，访问另一个网页上的敏感数据。
+同源策略可防止 JavaScript 发起跨域请求。源被定义为 URI、主机名和端口号的组合。此策略可防止页面上的恶意脚本通过该页面的文档对象模型，访问另一个网页上的敏感数据。
 
 ###### 参考
 
@@ -661,7 +670,7 @@ duplicate([1, 2, 3, 4, 5]); // [1,2,3,4,5,1,2,3,4,5]
 
 [[↑] 回到顶部](#js-问题)
 
-### 创建一个循环，从1迭代到100，`3`的倍数时输出 "fizz"，`5`的倍数时输出 "buzz"，同时为`3`和`5`的倍数时输出 "fizzbuzz"。
+### 创建一个循环，从 1 迭代到 100，`3`的倍数时输出 "fizz"，`5`的倍数时输出 "buzz"，同时为`3`和`5`的倍数时输出 "fizzbuzz"。
 
 来自 [Paul Irish](https://gist.github.com/jaysonrowe/1592432#gistcomment-790724)的 FizzBuzz。
 
@@ -689,9 +698,9 @@ for (let i = 1; i <= 100; i++) {
 
 ### 为什么要使用`load`事件？这个事件有什么缺点吗？你知道一些代替方案吗，为什么使用它们？
 
-在文档装载完成后会触发`load`事件。此时，在文档中的所有对象都在DOM中，所有图像、脚本、链接和子框架都完成了加载。
+在文档装载完成后会触发`load`事件。此时，在文档中的所有对象都在 DOM 中，所有图像、脚本、链接和子框架都完成了加载。
 
-DOM 事件`DOMContentLoaded`将在页面的DOM构建完成后触发，但不要等待其他资源完成加载。如果在初始化之前不需要装入整个页面，这个事件是使用首选。
+DOM 事件`DOMContentLoaded`将在页面的 DOM 构建完成后触发，但不要等待其他资源完成加载。如果在初始化之前不需要装入整个页面，这个事件是使用首选。
 
 TODO.
 
@@ -701,13 +710,13 @@ TODO.
 
 [[↑] 回到顶部](#js-问题)
 
-### 请解释单页应用是什么以及如何使其对SEO友好。
+### 请解释单页应用是什么，如何使其对 SEO 友好。
 
 以下摘自 [Grab Front End Guide](https://github.com/grab/front-end-guide)，碰巧的是，这正是我自己写的！
 
-现如今，Web开发人员将他们构建的产品称为Web应用，而不是网站。虽然这两个术语之间没有严格的区别，但网络应用往往具有高度的交互性和动态性，允许用户执行操作并接收他们的操作响应。在过去，浏览器从服务器接收 HTML 并渲染。当用户导航到其它 URL 时，需要整页刷新，服务器会为新页面发送新的 HTML。这被称为服务器端渲染。
+现如今，Web 开发人员将他们构建的产品称为 Web 应用，而不是网站。虽然这两个术语之间没有严格的区别，但网络应用往往具有高度的交互性和动态性，允许用户执行操作并接收他们的操作响应。在过去，浏览器从服务器接收 HTML 并渲染。当用户导航到其它 URL 时，需要整页刷新，服务器会为新页面发送新的 HTML。这被称为服务器端渲染。
 
-然而，在现代的 SPA 中，客户端渲染取而代之。浏览器从服务器加载初始页面，以及整个应用程序所需的脚本（框架、库、应用代码）和样式表。当用户导航到其他页面时，不会触发页面刷新。该页面的URL通过 [HTML5 History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API) 进行更新。浏览器通过 [AJAX](https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started) 请求向服务器检索新页面所需的数据（通常采用JSON格式）。然后，SPA 通过 JavaScript 来动态更新页面，这些 JavaScript 在初始页面加载时已经下载。这种模式类似于原生移动应用的工作方式。
+然而，在现代的 SPA 中，客户端渲染取而代之。浏览器从服务器加载初始页面、整个应用程序所需的脚本（框架、库、应用代码）和样式表。当用户导航到其他页面时，不会触发页面刷新。该页面的 URL 通过 [HTML5 History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API) 进行更新。浏览器通过 [AJAX](https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started) 请求向服务器检索新页面所需的数据（通常采用 JSON 格式）。然后，SPA 通过 JavaScript 来动态更新页面，这些 JavaScript 在初始页面加载时已经下载。这种模式类似于原生移动应用的工作方式。
 
 **好处：**
 
@@ -770,11 +779,11 @@ Some examples of languages that compile to JavaScript include CoffeeScript, Elm,
 
 **缺点：**
 
-* 由于浏览器只运行JavaScript，所以需要构建、编译过程，在将代码提供给浏览器之前，需要将代码转译为 JavaScript。
+* 由于浏览器只运行 JavaScript，所以需要构建、编译过程，在将代码提供给浏览器之前，需要将代码转译为 JavaScript。
 * 如果 source map 不能很好地映射到预编译的源代码，调试会很痛苦。
 * 大多数开发人员不熟悉这些语言，需要学习它。如果将其用于项目，会增加团队成本。
 * 社区比较小（取决于语言），这意味着资源、教程、图书和工具难以找到。
-* 可能缺乏IDE（编辑器）的支持。
+* 可能缺乏 IDE（编辑器）的支持。
 * 这些语言将始终落后于最新的 JavaScript 标准。
 * 开发人员应该清楚代码正在被编译到什么地方——因为这是实际运行的内容，是最重要的。
 
@@ -811,7 +820,7 @@ Some examples of languages that compile to JavaScript include CoffeeScript, Elm,
 
 * `for`循环：`for (var property in obj) { console.log(property); }`。但是，这还会遍历到它的继承属性，在使用之前，你需要加入`obj.hasOwnProperty(property)`检查。
 * `Object.keys()`：`Object.keys(obj).forEach(function (property) { ... })`。`Object.keys()`方法会返回一个由一个给定对象的自身可枚举属性组成的数组。
-* `Object.getOwnPropertyNames()`：`Object.getOwnPropertyNames(obj).forEach(function (property) { ... })`。`Object.getOwnPropertyNames()`方法返回一个由指定对象的所有自身属性的属性名（包括不可枚举属性但不包括Symbol值作为名称的属性）组成的数组。
+* `Object.getOwnPropertyNames()`：`Object.getOwnPropertyNames(obj).forEach(function (property) { ... })`。`Object.getOwnPropertyNames()`方法返回一个由指定对象的所有自身属性的属性名（包括不可枚举属性但不包括 Symbol 值作为名称的属性）组成的数组。
 
 **数组：**
 
@@ -828,34 +837,34 @@ Some examples of languages that compile to JavaScript include CoffeeScript, Elm,
 * 不变性有什么优点和缺点？
 * 你如何在自己的代码中实现不变性？
 
-***可变对象*** 在创建之后是可以被改变的。
+**_可变对象_** 在创建之后是可以被改变的。
 
-***不可变对象*** 在创建之后是不可以被改变的。
+**_不可变对象_** 在创建之后是不可以被改变的。
 
 1. 在 `JavaScript` 中，`string` 和 `number` 从设计之初就是不可变(Immutable)。
-2. ***不可变*** 其实是保持一个对象状态不变，这样做的好处是使得开发更加简单，可回溯，测试友好，减少了任何可能的副作用。但是，每当你想添加点东西到一个不可变(Immutable)对象里时，它一定是先拷贝已存在的值到新实例里，然后再给新实例添加内容，最后返回新实例。相比可变对象，这势必会有更多内存、计算量消耗。
+2. **_不可变_** 其实是保持一个对象状态不变，这样做的好处是使得开发更加简单，可回溯，测试友好，减少了任何可能的副作用。但是，每当你想添加点东西到一个不可变(Immutable)对象里时，它一定是先拷贝已存在的值到新实例里，然后再给新实例添加内容，最后返回新实例。相比可变对象，这势必会有更多内存、计算量消耗。
 3. 比如：构造一个纯函数
 
 ```js
 const student1 = {
-    school: "Baidu", 
-    name: 'HOU Ce',
-    birthdate: '1995-12-15',
-}
+  school: 'Baidu',
+  name: 'HOU Ce',
+  birthdate: '1995-12-15',
+};
 
 const changeStudent = (student, newName, newBday) => {
-    return {
-        ...student, // 使用解构
-        name: newName, // 覆盖name属性
-        birthdate: newBday // 覆盖birthdate属性
-    }
-}
+  return {
+    ...student, // 使用解构
+    name: newName, // 覆盖name属性
+    birthdate: newBday, // 覆盖birthdate属性
+  };
+};
 
 const student2 = changeStudent(student1, 'YAN Haijing', '1990-11-10');
 
 // both students will have the name properties
 console.log(student1, student2);
-// Object {school: "Baidu", name: "HOU Ce", birthdate: "1995-12-15"} 
+// Object {school: "Baidu", name: "HOU Ce", birthdate: "1995-12-15"}
 // Object {school: "Baidu", name: "YAN Haijing", birthdate: "1990-11-10"}
 ```
 
@@ -935,12 +944,15 @@ function foo() {
 console.log(bar); // ReferenceError: bar is not defined
 console.log(baz); // ReferenceError: baz is not defined
 console.log(qux); // ReferenceError: qux is not defined
+```
 
+```js
 if (true) {
   var bar = 'bar';
   let baz = 'baz';
   const qux = 'qux';
 }
+
 // 用 var 声明的变量在函数作用域上都可访问
 console.log(bar); // bar
 // let 和 const 定义的变量在它们被定义的语句块之外不可访问
@@ -1101,20 +1113,15 @@ console.log(q); // true
 
 ### ES6 的模板字符串为生成字符串提供了很大的灵活性，你可以举个例子吗？
 
-
-***模板字面量***（Template literals） 是允许嵌入表达式的字符串字面量。你可以使用多行字符串和字符串插值功能。
+**_模板字面量_**（Template literals） 是允许嵌入表达式的字符串字面量。你可以使用多行字符串和字符串插值功能。
 
 **语法**
 
 ```js
-`string text`
+`string text``string text line 1
+ string text line 2``string text ${expression} string text`;
 
-`string text line 1
- string text line 2`
-
-`string text ${expression} string text`
-
-tag `string text ${expression} string text`
+tag`string text ${expression} string text`;
 ```
 
 **示例**
@@ -1136,30 +1143,24 @@ console.log(`Fifteen is ${a + b} and\nnot ${2 * a + b}.`);
 //show函数采用rest参数的写法如下：
 
 let name = '张三',
+  age = 20,
+  message = show`我来给大家介绍:${name}的年龄是${age}.`;
 
-    age = 20,
+function show(stringArr, ...values) {
+  let output = '';
 
-    message = show`我来给大家介绍:${name}的年龄是${age}.`;
+  let index = 0;
 
-function show(stringArr,...values){
+  for (; index < values.length; index++) {
+    output += stringArr[index] + values[index];
+  }
 
-let output ="";
+  output += stringArr[index];
 
-let index = 0
-
-    for(;index<values.length;index++){
-
-        output += stringArr [index]+values[index];
-
-    }
-
-    output += stringArr [index];
-
-    return output;
-
+  return output;
 }
 
-message;       //"我来给大家介绍:张三的年龄是20."
+message; //"我来给大家介绍:张三的年龄是20."
 ```
 
 ###### 参考
@@ -1170,7 +1171,7 @@ message;       //"我来给大家介绍:张三的年龄是20."
 
 ### 你能举出一个柯里化函数（curry function）的例子吗？它有哪些好处？
 
-柯里化（currying）是一种模式，其中具有多个参数的函数被分解为多个函数，当被串联调用时，将一次一个地累积所有需要的参数。这种技术帮助编写函数式风格的代码，使代码更易读、紧凑。值得注意的是，对于需要被curry的函数，它需要从一个函数开始，然后分解成一系列函数，每个函数都需要一个参数。
+柯里化（currying）是一种模式，其中具有多个参数的函数被分解为多个函数，当被串联调用时，将一次一个地累积所有需要的参数。这种技术帮助编写函数式风格的代码，使代码更易读、紧凑。值得注意的是，对于需要被 curry 的函数，它需要从一个函数开始，然后分解成一系列函数，每个函数都需要一个参数。
 
 ```js
 function curry(fn) {
@@ -1270,7 +1271,7 @@ ES2015 定义了一个模块语法，旨在替换 AMD 和 CommonJS。 这最终�
 * https://nodejs.org/docs/latest/api/modules.html
 * http://2ality.com/2014/09/es6-modules-final.html
 
-### 为什么你可能想创建静态类成员？
+### 什么情况下会用到静态类成员？
 
 静态类成员（属性或方法）不绑定到某个类的特定实例，不管哪个实例引用它，都具有相同的值。静态属性通常是配置变量，而静态方法通常是纯粹的实用函数，不依赖于实例的状态。
 
