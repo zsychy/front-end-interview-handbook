@@ -2,7 +2,7 @@
 
 <div align="center">
   <a href="https://dribbble.com/shots/4263961-Front-End-Interview-Scroll">
-    <img src="https://cdn.rawgit.com/yangshun/front-end-interview-handbook/23d89c8/assets/scroll.svg" alt="Front End Interview Handbook" width="400"/>
+    <img src="assets/scroll.svg" alt="Front End Interview Handbook" width="400"/>
     </a>
   <br>
   <p>
@@ -17,9 +17,25 @@ Unlike typical software engineer job interviews, front-end job interviews have l
 
 While there are some existing resources to help front end developers in preparing for interviews, they aren't as abundant as materials for a software engineer interview. Among the existing resources, probably the most helpful question bank would be [Front-end Developer Interview Questions](https://github.com/h5bp/Front-end-Developer-Interview-Questions). Unfortunately, I couldn't find many complete and satisfactory answers to these questions online, hence here is my attempt at answering them. Being an open source repository, the project can live on with the support of the community as the state of web evolves.
 
+---
+
+<div align="center">
+  <strong>💰 Interested in Front End Dev jobs? Sign up with <a href="https://triplebyte.com/a/PJaJNpO/feihg">Triplebyte</a> to efficiently interview with top tech companies! 💰</strong>
+</div>
+
+---
+
 ## Looking for Generic Interview Preparation?
 
 You might be interested in the [Tech Interview Handbook](https://github.com/yangshun/tech-interview-handbook) which has helpful content on general coding interviews such as algorithms, behavioral questions and an [interview cheatsheet](https://github.com/yangshun/tech-interview-handbook/blob/master/preparing/cheatsheet.md)!
+
+<div align="center">
+  <img src="assets/web-tech.svg" alt="Web Technologies illustration" width="400"/>
+  <br>
+  <p>
+    <em>Credits: Illustration by <a href="https://undraw.co/">unDraw</a></em>
+  </p>
+</div>
 
 ## Table of Contents
 
@@ -29,11 +45,11 @@ You might be interested in the [Tech Interview Handbook](https://github.com/yang
 
 ## Translations
 
-* [English](/README.md)
-* [Simplified Chinese (简体中文)](/Translations/Chinese/README.md)
-* [Tagalog](/Translations/Tagalog/README.md)
-* [Japanese (日本語)](/Translations/Japanese/README.md)
-* [Korean](/Translations/Korean/README.md)
+- [English](/README.md)
+- [Simplified Chinese (简体中文)](/Translations/Chinese/README.md)
+- [Tagalog](/Translations/Tagalog/README.md)
+- [Japanese (日本語)](/Translations/Japanese/README.md)
+- [Korean (한국어))](/Translations/Korean/README.md)
 
 ## Related
 
@@ -48,6 +64,12 @@ We have adopted the same Code of Conduct as Facebook that we expect project part
 ### Contributing Guide
 
 Read our [contributing guide](/CONTRIBUTING.md) to learn about how you can contribute, how to propose improvements or if you are interested in translating the content.
+
+### Supporting
+
+Many hours of hard work have gone into this project. Your support will be very appreciated!
+
+<a href="https://www.buymeacoffee.com/yangshun" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
 
 ## License
 
